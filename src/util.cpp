@@ -218,10 +218,10 @@ void decode_orientation(const witmotion_datapacket &packet,
 {
     if(static_cast<witmotion_packet_id>(packet.id_byte) != pidOrientation)
         return;
-    x = decode_orientation(packet.datastore.raw_cells);
-    y = decode_orientation(packet.datastore.raw_cells + 1);
-    z = decode_orientation(packet.datastore.raw_cells + 2);
-    w = decode_orientation(packet.datastore.raw_cells + 3);
+    w = decode_orientation(packet.datastore.raw_cells); // TEST rotated w from bottom to top; seems to be correct.
+    x = decode_orientation(packet.datastore.raw_cells + 1);
+    y = decode_orientation(packet.datastore.raw_cells + 2);
+    z = decode_orientation(packet.datastore.raw_cells + 3);
 }
 
 void decode_gps_accuracy(const witmotion_datapacket &packet,
