@@ -360,7 +360,7 @@ signals:
 
 }
 
-Q_DECLARE_METATYPE(witmotion::witmotion_datapacket); ///< \private
-Q_DECLARE_METATYPE(witmotion::witmotion_config_packet); ///< \private
+Q_DECLARE_METATYPE(witmotion::witmotion_datapacket) ///< \private
+Q_DECLARE_METATYPE(witmotion::witmotion_config_packet) ///< \private
 
 #endif
